@@ -1,0 +1,16 @@
+{
+  "name": "egg-etag",
+  "version": "0.0.1",
+  "main": "app.js",
+  "eggPlugin": {
+    "name": "etag"
+  },
+  "dependencies": {
+    "koa-conditional-get": "^1.0.3",
+    "koa-etag": "^2.1.1"
+  },
+  "files": [
+    "app.js",
+    "README.md"
+  ]
+}
