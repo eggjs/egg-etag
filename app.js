@@ -1,9 +1,6 @@
 'use strict';
 
-const conditional = require('koa-conditional-get');
-const etag = require('koa-etag');
-
-module.exports = function(app) {
-  app.use(conditional());
-  app.use(etag());
+module.exports = app => {
+  app.config.coreMiddleware.push('conditional');
+  app.config.coreMiddleware.push('etag');
 };

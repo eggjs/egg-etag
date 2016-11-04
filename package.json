@@ -1,16 +1,57 @@
 {
   "name": "egg-etag",
-  "version": "0.0.1",
-  "main": "app.js",
+  "version": "1.0.0",
+  "description": "etag && conditional-get plugin for egg",
   "eggPlugin": {
     "name": "etag"
   },
+  "keywords": [
+    "egg",
+    "plugin"
+  ],
   "dependencies": {
     "koa-conditional-get": "^1.0.3",
     "koa-etag": "^2.1.1"
   },
+  "devDependencies": {
+    "autod": "^2.7.1",
+    "egg": "*",
+    "egg-bin": "^1.7.0",
+    "egg-ci": "^1.0.3",
+    "egg-mock": "^1.1.0",
+    "eslint": "^3.9.1",
+    "eslint-config-egg": "^3.1.0",
+    "intelli-espower-loader": "^1.0.1",
+    "power-assert": "^1.4.1",
+    "supertest": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "files": [
     "app.js",
-    "README.md"
-  ]
+    "app",
+    "config"
+  ],
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test -r intelli-espower-loader",
+    "cov": "egg-bin cov -r intelli-espower-loader",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "4, 6, 7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggjs/egg-etag.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eggjs/egg/issues"
+  },
+  "homepage": "https://github.com/eggjs/egg-etag#readme",
+  "author": "TZ <atian25@qq.com>",
+  "license": "MIT"
 }
