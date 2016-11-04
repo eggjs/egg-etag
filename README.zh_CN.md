@@ -20,15 +20,19 @@
 [download-image]: https://img.shields.io/npm/dm/egg-etag.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-etag
 
-Wrap [koa-etag](https://github.com/koajs/etag) and [koa-conditional-get](https://github.com/koajs/conditional-get) for egg
+基于 [koa-etag](https://github.com/koajs/etag) 和 [koa-conditional-get](https://github.com/koajs/conditional-get) 的 egg 插件封装。
 
-## Install
+开启以后，插件将基于 Response Body 计算 ETag 值，并 Response Header 增加 `ETag`，同时如果 Request Header 里面有 `If-None-Match`，并请匹配目前的计算出的 ETag，将返回 status 304。
+
+此功能在一些内容变化不多的场景，能有效避免网络下载。
+
+## 安装依赖
 
 ```bash
 $ npm i egg-etag --save
 ```
 
-## Usage
+## 开启插件
 
 ```js
 // {app_root}/config/plugin.js
@@ -37,9 +41,9 @@ exports.etag = {
 };
 ```
 
-## Configuration
+## 配置
 
-Support all configurations in [etag](https://github.com/jshttp/etag#options).
+参见 [etag](https://github.com/jshttp/etag#options) 的配置
 
 ```js
 // {app_root}/config/config.default.js
@@ -48,10 +52,10 @@ exports.etag = {
 };
 ```
 
-## Questions & Suggestions
+## 反馈
 
-Please open an issue [here](https://github.com/eggjs/egg/issues).
+使用上遇到问题, 或者你有更好的建议, 欢迎到提到 [egg issue](https://github.com/eggjs/egg/issues).
 
-## License
+## 开源协议
 
 [MIT](LICENSE)
