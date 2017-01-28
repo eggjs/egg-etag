@@ -2,14 +2,12 @@
 
 const request = require('supertest');
 const mm = require('egg-mock');
-const path = require('path');
 
 describe('test/etag.test.js', () => {
   let app;
   before(() => {
     app = mm.app({
       baseDir: 'apps/etag',
-      customEgg: path.join(__dirname, '../node_modules/egg'),
     });
     return app.ready();
   });
