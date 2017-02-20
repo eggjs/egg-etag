@@ -22,6 +22,8 @@
 
 Wrap [koa-etag](https://github.com/koajs/etag) and [koa-conditional-get](https://github.com/koajs/conditional-get) for egg
 
+**For better performance, we recommend to use [Nginx ETag](http://nginx.org/en/docs/http/ngx_http_core_module.html#etag) rather than use this plugin.**
+
 ## Install
 
 ```bash

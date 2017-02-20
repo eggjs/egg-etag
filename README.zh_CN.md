@@ -26,6 +26,8 @@
 
 此功能在一些内容变化不多的场景，能有效避免网络下载。
 
+**通常来说，基于性能方面的考虑，在生产环境我们会使用 [Nginx ETag](http://nginx.org/en/docs/http/ngx_http_core_module.html#etag) 来替代该插件。**
+
 ## 安装依赖
 
 ```bash
