@@ -18,17 +18,16 @@ describe('test/etag.test.js', () => {
 
   it('should GET / with etag', () => {
     return request(app.callback())
-    .get('/')
-    .expect('hi, egg')
-    .expect('ETag', '"7-CpbO4o2YQ+a1l3uAqpqk4w"')
-    .expect(200);
+      .get('/')
+      .expect('hi, egg')
+      .expect('ETag', '"7-F2kXUudLW/RKSGyNB58I1KPnwuI"')
+      .expect(200);
   });
 
   it('should response 304 ', () => {
     return request(app.callback())
-    .get('/')
-    .set('If-None-Match', '"7-CpbO4o2YQ+a1l3uAqpqk4w"')
-    .expect(304);
+      .get('/')
+      .set('If-None-Match', '"7-F2kXUudLW/RKSGyNB58I1KPnwuI"')
+      .expect(304);
   });
-
 });
