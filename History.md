@@ -1,6 +1,12 @@
+1.1.0
+-----
 
-1.0.0 / 2016-11-04
-==================
+Break changes:
 
-  * refactor: support options && add tests (#1)
+- Drop Node.js 4.x support.
+
+1.0.0
+-----
+
+* refactor: support options && add tests (#1)
 
