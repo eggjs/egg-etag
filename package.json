@@ -5,10 +5,14 @@
   "eggPlugin": {
     "name": "etag"
   },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "typings": "index.d.ts",
   "keywords": [
     "egg",
     "egg-plugin",
-    "eggPlugin"
+    "eggPlugin",
+    "etag"
   ],
   "dependencies": {
     "koa-conditional-get": "^1.0.3",
